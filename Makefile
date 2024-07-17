@@ -16,7 +16,7 @@ stop:
 	@echo "Stopping the Hyperliquid Testnet node..."
 	@docker compose stop
 
-.Phony: clean
+.PHONY: clean
 clean:
 	@echo "Removing old node data - sudo required!"
 	@sudo rm -rf "./node-data/"
