@@ -10,7 +10,7 @@ COPY . .
 
 FROM ubuntu:24.04
 
-ARG USER_ID=1000
+ARG USER_ID=2000
 ARG GROUP_ID=1001
 RUN apt-get update && \
   apt-get install -y curl && \
