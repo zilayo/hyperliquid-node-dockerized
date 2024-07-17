@@ -1,0 +1,10 @@
+services:
+  hyperliquid-node:
+    build: .
+    container_name: 'hyperliquid-node'
+    volumes:
+      - './node-data:/home/node/hl/data'
+    ports:
+      - '8000:8000'
+      - '9000:9000'
+    restart: 'always'
