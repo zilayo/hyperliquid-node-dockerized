@@ -13,6 +13,7 @@ Docker & Docker compose are required. See [https://docs.docker.com/engine/](http
 - Logs can be viewed by running `docker compose logs --tail=10 -f`
 - Data from the container will be mounted in this directory at ./node-data. Remove the volumes section from docker-compose if you don't require this.
 - To stop the node, run `make stop`.
+- Note - if the node is stopped, you must run `sudo make clean` before running `make start` again. Unfortunately sudo is currently required to delete logs due to underlying permissions set by the Hyperliquid binaries. To avoid this you can delete the volumes section entirely from the docker-compose.yml file
 
 ## Log cleanup
 
