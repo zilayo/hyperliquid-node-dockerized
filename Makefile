@@ -1,7 +1,6 @@
 .PHONY: start
-start:
-	@rm -rf "./node-data/"
-	@mkdir node-data && chmod -R 777 "./node-data/"
+start: 
+	@mkdir -p node-data && chmod 777 "./node-data/"
 	@echo "Building & Running Hyperliquid Testnet node..."
 	@DOCKER_BUILDKIT=1 docker compose build
 
@@ -16,3 +15,9 @@ start:
 stop:
 	@echo "Stopping the Hyperliquid Testnet node..."
 	@docker compose stop
+
+.Phony: clean
+clean:
+	@echo "Removing old node data - sudo required!"
+	@sudo rm -rf "./node-data/"
+	@echo "./node-data successfully deleted"
