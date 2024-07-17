@@ -23,7 +23,7 @@ COPY --chown=node:node --from=build /hyperliquid/non_validator_config.json /home
 COPY --chown=node:node --from=build /hyperliquid/initial_peers.json /home/node/initial_peers.json
 COPY --chown=node:node --from=build /hyperliquid/visor.json /home/node/visor.json
 
-RUN mkdir -p /home/node/hl/ && chown -R node:node /home/node/hl/
+RUN mkdir -p /home/node/hl/data && chown -R node:node /home/node/hl/ && chmod -R 777 /home/node/hl/
 
 EXPOSE 8000 9000
 

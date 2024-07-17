@@ -1,6 +1,7 @@
 .PHONY: start
 start:
-	@rm -rf "./node-data/*"
+	@rm -rf "./node-data/"
+	@mkdir node-data
 	@echo "Building & Running Hyperliquid Testnet node..."
 	@DOCKER_BUILDKIT=1 docker compose build
 
