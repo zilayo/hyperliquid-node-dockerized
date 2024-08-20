@@ -1,4 +1,4 @@
-FROM ubuntu:22.04 AS build
+FROM ubuntu:24.04 AS build
 
 WORKDIR /hyperliquid/
 RUN apt-get update && \
@@ -8,7 +8,7 @@ RUN apt-get update && \
 
 COPY . .
 
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 ARG USER_ID=2000
 ARG GROUP_ID=1001
