@@ -30,5 +30,5 @@ EXPOSE 8000 9000
 USER node
 ENV RUST_BACKTRACE=1
 ENV RUST_LOG=debug
-ENTRYPOINT [ "./hl-visor" ]
+ENTRYPOINT [ "./hl-visor", "run-non-validator", "--evm" ]
 
